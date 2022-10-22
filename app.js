@@ -20,9 +20,9 @@ const morgan=require('morgan')
 const cookieParser=require('cookie-parser')
 const { authentication } = require('./middleware/authentication')
 
-app.use('/',(req,res)=>{
-    res.send('home page')
-})
+// app.use('/',(req,res)=>{
+//     res.send('home page')
+// })
 
 
 app.use(express.static('./public'))
