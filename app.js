@@ -15,7 +15,8 @@ const productrouter=require('./routes/productRoutes')
 const reviewrouter=require('./routes/reviewRoutes')
 const orderrouter=require('./routes/orderRoutes')
 
-
+const cors=require('cors')
+app.use(cors())
 const morgan=require('morgan')
 const cookieParser=require('cookie-parser')
 const { authentication } = require('./middleware/authentication')
@@ -25,7 +26,7 @@ const { authentication } = require('./middleware/authentication')
 // })
 
 
-app.use(express.static('./public'))
+// app.use(express.static('./public'))
 app.use(express.json())
 app.use(morgan('tiny'))
 app.use(cookieParser(process.env.JWT_SECRETKEY))
