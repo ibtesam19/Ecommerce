@@ -7,7 +7,8 @@ const connectDb=require('./db/connect')
 const errorHandler=require('./middleware/error-handler')
 const notFound=require('./middleware/not-found')
 const fileUpload=require('express-fileupload')
-
+const cors=require('cors')
+app.use(cors())
 app.use(express.static('./public'))
 
 const authrouter=require('./routes/authroutes')
@@ -16,8 +17,7 @@ const productrouter=require('./routes/productRoutes')
 const reviewrouter=require('./routes/reviewRoutes')
 const orderrouter=require('./routes/orderRoutes')
 
-const cors=require('cors')
-app.use(cors())
+
 const morgan=require('morgan')
 const cookieParser=require('cookie-parser')
 const { authentication } = require('./middleware/authentication')
