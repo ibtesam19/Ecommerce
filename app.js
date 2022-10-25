@@ -7,8 +7,18 @@ const connectDb=require('./db/connect')
 const errorHandler=require('./middleware/error-handler')
 const notFound=require('./middleware/not-found')
 const fileUpload=require('express-fileupload')
+
+const helmet =require('helmet')
+const xss=require('xss-clean')
+const express_mongo_senetize=require('express-mongo-sanitize')
 const cors=require('cors')
+
+
 app.use(cors())
+app.use(xss())
+app.use(express_mongo_senetize())
+app.use(helmet())
+
 app.use(express.static('./public'))
 
 const authrouter=require('./routes/authroutes')
