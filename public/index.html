@@ -8420,9 +8420,12 @@
                         </ul>
                     <li><strong><a href=#products>products</a></strong>
                         <ul>
-                            <li><a class=endpoint_menu href=#jump-products-admin>admin</a>
                             <li><a class=endpoint_menu href=#jump-products-getAllProducts>getAllProducts</a>
                             <li><a class=endpoint_menu href=#jump-products-getSingleProduct>getSingleProduct</a>
+                            <li><a class=endpoint_menu href=#jump-products-createProduct>createProduct</a>
+                            <li><a class=endpoint_menu href=#jump-products-deleteProduct>deleteProduct</a>
+                            <li><a class=endpoint_menu href=#jump-products-uploadImage>uploadImage</a>
+                            <li><a class=endpoint_menu href=#jump-products-updateProduct>updateProduct</a>
                             <li><a class=endpoint_menu
                                     href=#jump-products-getsingleproductreviews>getsingleproductreviews</a>
                         </ul>
@@ -8620,27 +8623,13 @@
                 <div class="panel panel-default">
                     <div class=panel-heading>
                         <h3 class=panel-title id=products>products
-                            <span class=badge>4</span>
+                            <span class=badge>7</span>
                         </h3>
                     </div>
                     <div class=panel-body>
                         <p>
                         <div class=request-item>
                             <div class=panel-group id=accordion-products>
-                                <div class="panel panel-info" id=jump-products-admin>
-                                    <div class=panel-heading><small class="pull-right text-muted"></small><a
-                                            class=text-info data-toggle=collapse data-parent=#accordion-products
-                                            href=#collapse-products-admin>
-                                            <h4 class=panel-title><span
-                                                    class="glyphicon glyphicon-plus"></span><strong>admin</strong>
-                                                &nbsp;|&nbsp;
-                                                <strong class="request-method border-info"></strong>&nbsp;
-                                            </h4>
-                                        </a></div>
-                                    <div id=collapse-products-admin class="panel-collapse collapse">
-                                        <div class=panel-body></div>
-                                    </div>
-                                </div>
                                 <div class="panel panel-info" id=jump-products-getAllProducts>
                                     <div class=panel-heading><small class="pull-right text-muted"></small><a
                                             class=text-info data-toggle=collapse data-parent=#accordion-products
@@ -8670,6 +8659,70 @@
                                             </h4>
                                         </a></div>
                                     <div id=collapse-products-getSingleProduct class="panel-collapse collapse">
+                                        <div class=panel-body></div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-success" id=jump-products-createProduct>
+                                    <div class=panel-heading><small class="pull-right text-muted"></small><a
+                                            class=text-success data-toggle=collapse data-parent=#accordion-products
+                                            href=#collapse-products-createProduct>
+                                            <h4 class=panel-title><span
+                                                    class="glyphicon glyphicon-plus"></span><strong>createProduct</strong>
+                                                &nbsp;|&nbsp;
+                                                <strong class="request-method border-success">POST</strong>
+                                                &nbsp;
+                                                {{URL}}/products
+                                            </h4>
+                                        </a></div>
+                                    <div id=collapse-products-createProduct class="panel-collapse collapse">
+                                        <div class=panel-body></div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-danger" id=jump-products-deleteProduct>
+                                    <div class=panel-heading><small class="pull-right text-muted"></small><a
+                                            class=text-danger data-toggle=collapse data-parent=#accordion-products
+                                            href=#collapse-products-deleteProduct>
+                                            <h4 class=panel-title><span
+                                                    class="glyphicon glyphicon-plus"></span><strong>deleteProduct</strong>
+                                                &nbsp;|&nbsp;
+                                                <strong class="request-method border-danger">DELETE</strong>
+                                                &nbsp;
+                                                {{URL}}/products/2
+                                            </h4>
+                                        </a></div>
+                                    <div id=collapse-products-deleteProduct class="panel-collapse collapse">
+                                        <div class=panel-body></div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-success" id=jump-products-uploadImage>
+                                    <div class=panel-heading><small class="pull-right text-muted"></small><a
+                                            class=text-success data-toggle=collapse data-parent=#accordion-products
+                                            href=#collapse-products-uploadImage>
+                                            <h4 class=panel-title><span
+                                                    class="glyphicon glyphicon-plus"></span><strong>uploadImage</strong>
+                                                &nbsp;|&nbsp;
+                                                <strong class="request-method border-success">POST</strong>
+                                                &nbsp;
+                                                {{URL}}/products/upload
+                                            </h4>
+                                        </a></div>
+                                    <div id=collapse-products-uploadImage class="panel-collapse collapse">
+                                        <div class=panel-body></div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-warning" id=jump-products-updateProduct>
+                                    <div class=panel-heading><small class="pull-right text-muted"></small><a
+                                            class=text-warning data-toggle=collapse data-parent=#accordion-products
+                                            href=#collapse-products-updateProduct>
+                                            <h4 class=panel-title><span
+                                                    class="glyphicon glyphicon-plus"></span><strong>updateProduct</strong>
+                                                &nbsp;|&nbsp;
+                                                <strong class="request-method border-warning">PATCH</strong>
+                                                &nbsp;
+                                                {{URL}}/products/2
+                                            </h4>
+                                        </a></div>
+                                    <div id=collapse-products-updateProduct class="panel-collapse collapse">
                                         <div class=panel-body></div>
                                     </div>
                                 </div>
@@ -8885,12 +8938,11 @@
         </div>
     </div>
     <br><br>
-    <script src="./browser.js"></script>
     <footer class="navbar-default navbar-fixed-bottom">
         <div class=container-fluid>
             <div class="span12 text-center"><span data-toggle=tooltip
                     title="If the application help you, please feel free to give a star to the project in github. Your star inspire me to work more on open-source projects like this!">Generated
-                    at 2022-10-25 20:38:47 by <a href=https://github.com/thedevsaddam/docgen target=_blank
+                    at 2022-10-25 22:18:59 by <a href=https://github.com/thedevsaddam/docgen target=_blank
                         class=text-muted>docgen</a></span></div>
         </div>
     </footer>
