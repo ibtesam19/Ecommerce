@@ -52,7 +52,6 @@ app.use('/api/v1/orders',authentication,orderrouter)
 app.use(notFound)
 app.use(errorHandler)
 
-
 const port=process.env.PORT || 5000;
 const start=async()=>{
 await connectDb(process.env.MONGO_URI)
