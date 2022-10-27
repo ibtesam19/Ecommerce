@@ -8459,8 +8459,8 @@
                         <div class=request-item>
                             <div class=panel-group id=accordion-Auth>
                                 <div class="panel panel-success" id=jump-Auth-registerUser>
-                                    <div class=panel-heading><small class="pull-right text-muted"></small><a
-                                            class=text-success data-toggle=collapse data-parent=#accordion-Auth
+                                    <div class=panel-heading><small class="pull-right text-muted">raw</small>
+                                        <a class=text-success data-toggle=collapse data-parent=#accordion-Auth
                                             href=#collapse-Auth-registerUser>
                                             <h4 class=panel-title><span
                                                     class="glyphicon glyphicon-plus"></span><strong>registerUser</strong>
@@ -8469,14 +8469,22 @@
                                                 &nbsp;
                                                 https://e-commerce-19.herokuapp.com/api/v1/auth/register
                                             </h4>
-                                        </a></div>
+                                        </a>
+                                    </div>
                                     <div id=collapse-Auth-registerUser class="panel-collapse collapse">
-                                        <div class=panel-body></div>
+                                        <div class=panel-body>
+                                            <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+                                                &#34;name&#34;: &#34;sami&#34;,
+                                                &#34;email&#34;: &#34;sami@gmail.com&#34;,
+                                                &#34;password&#34;: &#34;secret&#34;
+                                                }</span>
+                                            <div class=clearfix></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="panel panel-success" id=jump-Auth-loginUser>
-                                    <div class=panel-heading><small class="pull-right text-muted"></small><a
-                                            class=text-success data-toggle=collapse data-parent=#accordion-Auth
+                                    <div class=panel-heading><small class="pull-right text-muted">raw</small>
+                                        <a class=text-success data-toggle=collapse data-parent=#accordion-Auth
                                             href=#collapse-Auth-loginUser>
                                             <h4 class=panel-title><span
                                                     class="glyphicon glyphicon-plus"></span><strong>loginUser</strong>
@@ -8485,9 +8493,16 @@
                                                 &nbsp;
                                                 https://e-commerce-19.herokuapp.com/api/v1/auth/login
                                             </h4>
-                                        </a></div>
+                                        </a>
+                                    </div>
                                     <div id=collapse-Auth-loginUser class="panel-collapse collapse">
-                                        <div class=panel-body></div>
+                                        <div class=panel-body>
+                                            <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+                                                &#34;email&#34;:&#34;ibtesam@gmail.com&#34;,
+                                                &#34;password&#34;:&#34;secret&#34;
+                                                }</span>
+                                            <div class=clearfix></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="panel panel-info" id=jump-Auth-logoutUser>
@@ -8499,7 +8514,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/auth/logout
+                                                {{URL}}/auth/logout
                                             </h4>
                                         </a></div>
                                     <div id=collapse-Auth-logoutUser class="panel-collapse collapse">
@@ -8529,7 +8544,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/user
+                                                {{URL}}/user
                                             </h4>
                                         </a></div>
                                     <div id=collapse-user-getAllUsers class="panel-collapse collapse">
@@ -8545,7 +8560,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/user/showMe
+                                                {{URL}}/user/showMe
                                             </h4>
                                         </a></div>
                                     <div id=collapse-user-showCurrentUser class="panel-collapse collapse">
@@ -8561,7 +8576,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/user/2
+                                                {{URL}}/user/2
                                             </h4>
                                         </a></div>
                                     <div id=collapse-user-getSingleUser class="panel-collapse collapse">
@@ -8577,7 +8592,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-warning">PATCH</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/user/updateuser
+                                                {{URL}}/user/updateuser
                                             </h4>
                                         </a></div>
                                     <div id=collapse-user-updateuser class="panel-collapse collapse">
@@ -8593,7 +8608,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-warning">PATCH</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/user/updateuserpassword
+                                                {{URL}}/user/updateuserpassword
                                             </h4>
                                         </a></div>
                                     <div id=collapse-user-updateuserpassword class="panel-collapse collapse">
@@ -8609,7 +8624,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/products/2
+                                                {{URL}}/products/2
                                             </h4>
                                         </a></div>
                                     <div id=collapse-user-getSingleProduct class="panel-collapse collapse">
@@ -8639,7 +8654,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/products
+                                                {{URL}}/products
                                             </h4>
                                         </a></div>
                                     <div id=collapse-products-getAllProducts class="panel-collapse collapse">
@@ -8655,7 +8670,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/products/633b2927f2dd7a7fd61041d6
+                                                {{URL}}/products/633b2927f2dd7a7fd61041d6
                                             </h4>
                                         </a></div>
                                     <div id=collapse-products-getSingleProduct class="panel-collapse collapse">
@@ -8671,7 +8686,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-success">POST</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/products
+                                                {{URL}}/products
                                             </h4>
                                         </a></div>
                                     <div id=collapse-products-createProduct class="panel-collapse collapse">
@@ -8687,7 +8702,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-danger">DELETE</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/products/2
+                                                {{URL}}/products/2
                                             </h4>
                                         </a></div>
                                     <div id=collapse-products-deleteProduct class="panel-collapse collapse">
@@ -8703,7 +8718,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-success">POST</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/products/upload
+                                                {{URL}}/products/upload
                                             </h4>
                                         </a></div>
                                     <div id=collapse-products-uploadImage class="panel-collapse collapse">
@@ -8719,7 +8734,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-warning">PATCH</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/products/2
+                                                {{URL}}/products/2
                                             </h4>
                                         </a></div>
                                     <div id=collapse-products-updateProduct class="panel-collapse collapse">
@@ -8764,7 +8779,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/reviews
+                                                {{URL}}/reviews
                                             </h4>
                                         </a></div>
                                     <div id=collapse-reviews-getAllReviews class="panel-collapse collapse">
@@ -8780,7 +8795,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/reviews/2
+                                                {{URL}}/reviews/2
                                             </h4>
                                         </a></div>
                                     <div id=collapse-reviews-getSingleReview class="panel-collapse collapse">
@@ -8796,7 +8811,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-success">POST</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/reviews
+                                                {{URL}}/reviews
                                             </h4>
                                         </a>
                                     </div>
@@ -8813,7 +8828,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-warning">PATCH</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/reviews/2
+                                                {{URL}}/reviews/2
                                             </h4>
                                         </a></div>
                                     <div id=collapse-reviews-updateReview class="panel-collapse collapse">
@@ -8829,7 +8844,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-danger">DELETE</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/reviews/2
+                                                {{URL}}/reviews/2
                                             </h4>
                                         </a></div>
                                     <div id=collapse-reviews-deleteReview class="panel-collapse collapse">
@@ -8859,7 +8874,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/orders
+                                                {{URL}}/orders
                                             </h4>
                                         </a></div>
                                     <div id=collapse-orders-getAllOrders class="panel-collapse collapse">
@@ -8875,7 +8890,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/orders/2
+                                                {{URL}}/orders/2
                                             </h4>
                                         </a></div>
                                     <div id=collapse-orders-getSingleOrder class="panel-collapse collapse">
@@ -8891,7 +8906,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/orders/showAllMyOrders
+                                                {{URL}}/orders/showAllMyOrders
                                             </h4>
                                         </a></div>
                                     <div id=collapse-orders-showAllMyOrders class="panel-collapse collapse">
@@ -8907,7 +8922,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-success">POST</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/orders
+                                                {{URL}}/orders
                                             </h4>
                                         </a></div>
                                     <div id=collapse-orders-createOrder class="panel-collapse collapse">
@@ -8923,7 +8938,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-warning">PATCH</strong>
                                                 &nbsp;
-                                                https://e-commerce-19.herokuapp.com/api/v1/orders/2
+                                                {{URL}}/orders/2
                                             </h4>
                                         </a></div>
                                     <div id=collapse-orders-updateOrder class="panel-collapse collapse">
@@ -8943,7 +8958,7 @@
         <div class=container-fluid>
             <div class="span12 text-center"><span data-toggle=tooltip
                     title="If the application help you, please feel free to give a star to the project in github. Your star inspire me to work more on open-source projects like this!">Generated
-                    at 2022-10-27 15:03:57 by <a href=https://github.com/thedevsaddam/docgen target=_blank
+                    at 2022-10-27 20:42:14 by <a href=https://github.com/thedevsaddam/docgen target=_blank
                         class=text-muted>docgen</a></span></div>
         </div>
     </footer>
