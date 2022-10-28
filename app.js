@@ -40,7 +40,7 @@ app.use(morgan('tiny'))
 app.use(cookieParser(process.env.JWT_SECRETKEY))
 app.use(fileUpload())
 app.use('/',(req,res)=>{
-    res.send('<a href="/api-documents">documentation</a>')
+    res.send('<h1>docs</h1><a href="/api-documents">Documentation</a>')
 })
 app.use('/api-documents',swaggerUI.serve,swaggerUI.setup(swaggerDocument))
 app.use('/api/v1/user',userrouter)
