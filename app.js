@@ -13,13 +13,16 @@ const xss=require('xss-clean')
 const express_mongo_senetize=require('express-mongo-sanitize')
 const cors=require('cors')
 
+const YAML=require('yamljs')
+const swaggerUI=require('swagger-ui-express')
+const swaggerDocument=YAML.load('./swagger.yaml')
 
 app.use(cors())
 app.use(xss())
 app.use(express_mongo_senetize())
 app.use(helmet())
 
-app.use(express.static('./public'))
+// app.use(express.static('./public'))
 
 const authrouter=require('./routes/authroutes')
 const userrouter=require('./routes/userRoutes')
@@ -32,17 +35,12 @@ const morgan=require('morgan')
 const cookieParser=require('cookie-parser')
 const { authentication } = require('./middleware/authentication')
 
-// app.use('/',(req,res)=>{
-//     res.send('home page')
-// })
-
-
 app.use(express.json())
 app.use(morgan('tiny'))
 app.use(cookieParser(process.env.JWT_SECRETKEY))
 app.use(fileUpload())
 
-
+app.use('/',swaggerUI.serve,swaggerUI.setup(swaggerDocument))
 app.use('/api/v1/user',userrouter)
 app.use('/api/v1/auth',authrouter)
 app.use('/api/v1/products',productrouter)
