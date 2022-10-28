@@ -39,7 +39,7 @@ app.use(express.json())
 app.use(morgan('tiny'))
 app.use(cookieParser(process.env.JWT_SECRETKEY))
 app.use(fileUpload())
-app.use('/',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send('<h1>docs</h1><a href="/api-documents">Documentation</a>')
 })
 app.use('/api-documents',swaggerUI.serve,swaggerUI.setup(swaggerDocument))
