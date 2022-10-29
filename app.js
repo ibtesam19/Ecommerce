@@ -40,6 +40,7 @@ app.use(morgan('tiny'))
 app.use(cookieParser(process.env.JWT_SECRETKEY))
 app.use(fileUpload())
 
+//new line
 app.get('/',(req,res)=>{
     res.send('<h1>Ecommerce</h1><a href="/api-documents">SwaggerUI Docs</a>')
 })
