@@ -18,8 +18,8 @@ const swaggerUI=require('swagger-ui-express')
 const swaggerDocument=YAML.load('./swagger.yaml')
 
 app.use(cors())
-// app.use(xss())
-// app.use(express_mongo_senetize())
+app.use(xss())
+app.use(express_mongo_senetize())
 app.use(helmet())
 
 // app.use(express.static('./public'))
