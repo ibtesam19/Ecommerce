@@ -42,7 +42,7 @@ app.use(fileUpload())
 
 //new line
 app.get('/',(req,res)=>{
-    res.send('<h1>Ecommerce</h1><a href="/api-documents">SwaggerUI Docs</a>')
+    res.send('<h1>Ecommerce</h1><a href="/api-documents">SwaggerUI Documentation</a>')
 })
 
 app.use('/api-documents',swaggerUI.serve,swaggerUI.setup(swaggerDocument))
